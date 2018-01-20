@@ -38,7 +38,7 @@ CREATE CONTINUOUS QUERY radio_cq_5m ON telegraf BEGIN SELECT count(UserName) AS 
 CREATE CONTINUOUS QUERY cq_5m ON telegraf BEGIN SELECT count(UserName) AS "Users" INTO telegraf."1year".wifi_users FROM telegraf."1day".wifi_users GROUP BY time(5m), UserRole END
 ```
 ## Telegraf
-We will colect data using Telegraf with the SNMP plugin, but first we have to create an output with tagexclude ant tagpass for sending the data to database "telegraf" with the right RP of 1day. Just download the [wifi-users.conf](https://github.com/vbarahona/wifiarubausers2grafana/wifi-users.conf), copy the file in /etc/telegraf/telegraf.d/ and restar telegraf
+We will colect data using Telegraf with the SNMP plugin, but first we have to create an output with tagexclude ant tagpass for sending the data to database "telegraf" with the right RP of 1day. Just download the [wifi-users.conf](https://github.com/vbarahona/wifiarubausers2grafana/raw/master/wifi-users.conf), copy the file in /etc/telegraf/telegraf.d/ and restar telegraf
 ```
 sudo service telegraf restart
 ```
