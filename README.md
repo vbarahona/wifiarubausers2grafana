@@ -47,3 +47,4 @@ After some seconds, its a good idea to check if everything is working
 sudo service telegraf status
 ```
 ## Grafana
+Finally you can import the dashboard importing the json file [wifi-users_grafana_dashboard.json](https://github.com/vbarahona/wifiarubausers2grafana/raw/master/wifi-users_grafana_dashboard.json) or importing from the Dashboard number 4423 from [grafana.com](https://grafana.com/dashboards/4423)
