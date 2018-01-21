@@ -1,4 +1,34 @@
 {
+  "__inputs": [
+    {
+      "name": "DS_INFLUXDB_TELEGRAF",
+      "label": "influxdb_telegraf",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "influxdb",
+      "pluginName": "InfluxDB"
+    }
+  ],
+  "__requires": [
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "4.6.3"
+    },
+    {
+      "type": "panel",
+      "id": "graph",
+      "name": "Graph",
+      "version": ""
+    },
+    {
+      "type": "datasource",
+      "id": "influxdb",
+      "name": "InfluxDB",
+      "version": "1.0.0"
+    }
+  ],
   "annotations": {
     "list": [
       {
@@ -16,7 +46,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "hideControls": false,
-  "id": 19,
+  "id": null,
   "links": [],
   "refresh": "5m",
   "rows": [
@@ -29,7 +59,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "influxdb_telegraf",
+          "datasource": "${DS_INFLUXDB_TELEGRAF}",
           "description": "",
           "fill": 1,
           "id": 1,
@@ -211,7 +241,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "influxdb_telegraf",
+          "datasource": "${DS_INFLUXDB_TELEGRAF}",
           "fill": 1,
           "id": 3,
           "legend": {
@@ -345,7 +375,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "influxdb_telegraf",
+          "datasource": "${DS_INFLUXDB_TELEGRAF}",
           "fill": 1,
           "id": 2,
           "interval": "",
@@ -1030,7 +1060,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "influxdb_telegraf",
+          "datasource": "${DS_INFLUXDB_TELEGRAF}",
           "fill": 1,
           "id": 4,
           "interval": "",
@@ -1499,7 +1529,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "influxdb_telegraf",
+          "datasource": "${DS_INFLUXDB_TELEGRAF}",
           "fill": 1,
           "id": 5,
           "legend": {
@@ -2155,7 +2185,7 @@
           "bars": true,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "influxdb_telegraf",
+          "datasource": "${DS_INFLUXDB_TELEGRAF}",
           "fill": 1,
           "id": 6,
           "legend": {
@@ -2261,7 +2291,7 @@
           "bars": true,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "influxdb_telegraf",
+          "datasource": "${DS_INFLUXDB_TELEGRAF}",
           "fill": 1,
           "id": 7,
           "legend": {
@@ -2363,7 +2393,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "influxdb_telegraf",
+          "datasource": "${DS_INFLUXDB_TELEGRAF}",
           "fill": 1,
           "id": 8,
           "legend": {
