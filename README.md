@@ -38,9 +38,9 @@ CREATE CONTINUOUS QUERY radio_cq_5m ON telegraf BEGIN SELECT count(UserName) AS 
 CREATE CONTINUOUS QUERY cq_5m ON telegraf BEGIN SELECT count(UserName) AS "Users" INTO telegraf."1year".wifi_users FROM telegraf."1day".wifi_users GROUP BY time(5m), UserRole END
 ```
 ## Telegraf
-First, download [WLSX-USER-MIB.my](https://raw.githubusercontent.com/vbarahona/wifiarubausers2grafana/master/WLSX-USER-MIB.my) and copy it in /etc/telegraf/telegraf.d/.snmp/mibs/WLSX-USER-MIB.my
+Copy the contained files in the directory arubaos_mibs/ to /etc/telegraf/telegraf.d/.snmp/mibs/
 
-We will colect data using Telegraf with the SNMP plugin, but first we have to create an output with tagexclude ant tagpass for sending the data to database "telegraf" with the right RP of 1day. Just download the [wifi-users.conf](https://github.com/vbarahona/wifiarubausers2grafana/raw/master/wifi-users.conf), copy the file in /etc/telegraf/telegraf.d/ and restart telegraf
+We will collect data using Telegraf with the SNMP plugin, but first we have to create an output with tagexclude ant tagpass for sending the data to database "telegraf" with the right RP of 1day. Just download the [wifi-users.conf](https://github.com/vbarahona/wifiarubausers2grafana/raw/master/wifi-users.conf), copy the file in /etc/telegraf/telegraf.d/ and restart telegraf
 ```
 sudo service telegraf restart
 ```
